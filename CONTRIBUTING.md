@@ -300,6 +300,14 @@ See also our GitHub issues with the label [`testing`](https://github.com/kubereb
 Ensure you have used the latest patch version in the tree. 
 Check the documentation "Updating k8s support" if the minor version was not yet applied.
 
+### Update the manifests with the new version
+
+```sh
+export VERSION=1.24.0
+make DH_ORG="kubereboot" VERSION="${VERSION}" manifest
+```
+Create a commit updating the manifest with future image [like this one](https://github.com/kubereboot/kured/commit/58091f6145771f426b4b9e012a43a9c847af2560).
+
 ### Create the new version tag on the repo (optional, can also be done directly in GH web interface)
 
 Tag the previously created commit with the future release version.
